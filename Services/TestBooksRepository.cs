@@ -4,9 +4,10 @@ using Fisher.Bookstore.Models;
 
 namespace Fisher.Bookstore.Services
 {
-
+    
     public class TestBooksRepository : IBooksRepository
     {
+    
         private Dictionary<int, Book> books;
 
         public TestBooksRepository()
@@ -22,6 +23,7 @@ namespace Fisher.Bookstore.Services
                 new Book{Title="Harry Potter and the Half-Blood Prince"},
             }.ForEach(b => AddBook(b));
         }
+        
         public int AddBook(Book book)
         {
             if (book.Id == 0)
