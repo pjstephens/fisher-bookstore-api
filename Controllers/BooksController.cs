@@ -58,6 +58,7 @@ namespace Fisher.Bookstore.Controllers
         }
 
         [HttpDelete("{bookId}")]
+        [Authorize]
         public IActionResult Delete(int bookId)
         {
             if (!booksRepository.BookExists(bookId))
